@@ -1,0 +1,56 @@
+
+1. feladat: CREATE DATABASE magyar;
+2. feladat: USE magyar;
+3. feladat: SHOW VARIABLES LIKE "char%database";
+4. feladat: SHOW VARIABLES LIKE "colla%database";
+
+
+1. Készítünk egy adatbázist utf8-ban
+CREATE DATABASE magyar_km
+	DEFAULT CHARACTER SET utf8
+	DEFAULT COLLATE utf8_hungarian_ci
+
+
+2. Kimutatja a karakterkészleteket
+SHOW VARIABLES LIKE "char%database";
+
+
+3. Kimutatja a helyesírási szabályokat
+SHOW VARIABLES LIKE "colla%database";
+
+4. Karakterkészlet változtatása
+ALTER DATABASE magyar_km
+	DEFAULT CHARACTER SET <CHARSETNAME>;
+
+5.
+ALTER DATABASE magyar_km
+	DEFAULT COLLATE <CHARSETNAME>;
+
+
+----------
+
+
+CREATE DATABASE buli_km
+	DEFAULT CHARACTER SET utf8
+	DEFAULT COLLATE utf8_hungarian_ci
+
+SHOW VARIABLES LIKE "char%database";
+
+SHOW VARIABLES LIKE "colla%database";
+
+
+
+-------------
+
+Készít egy táblázatot
+
+CREATE TABLE <nev>;
+(
+	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+	név VARCHAR (20),
+	étel VARCHAR (30),
+	jöne CHAR (1),
+	dátum DATE
+);
+
+DESCRIBE résztvevők;
