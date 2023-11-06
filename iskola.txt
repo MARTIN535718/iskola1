@@ -1,0 +1,60 @@
+
+CREATE DATABASE iskola_km
+	DEFAULT CHARACTER SET latin2
+	DEFAULT COLLATE utf8_hungarian_ci;
+
+
+
+CREATE TABLE tanulók
+(
+    Nev VARCHAR(40) PRIMARY KEY,
+    Osztaly CHAR(3),
+    Kor INT
+);
+
+
+
+ALTER TABLE tanulók ALTER Kor SET DEFAULT 14;
+
+
+
+INSERT INTO tanulók VALUES
+	('Jánosi János', '10A', 14),
+	('Egyed Anna', '10B', 14),
+	('Bácskai Emese', '10A', 15),
+	('Balla Béla', '10B', 16),
+	('Egyem Károly', '10A', 14),
+	('Néma Levente', '11A', 15),
+	('Nagy Kata', '11A', 16),
+	('Nagy Ákos', '11B', 16),
+	('Aranyos Jolán', '11C', 17),
+	('Szalay Borbála', '11C', 16),
+	('Kósa Ferenc', '11B', 16),
+	('Kányi Máté', '11C', 17),
+	('Zoób Eszter', '11A', 15),
+	('Csernyik Éva', '12A', 17),
+	('Csóka Csaba', '12A', 17),
+	('Fóka Ferenc', '12A', 18);
+
+INSERT INTO tanulók VALUES
+	('Martin', '11C', NULL);
+
+DELETE FROM tanulók
+	WHERE Nev = 'Martin';
+
+2a
+SELECT Nev, Osztaly
+	FROM tanulók;
+2b
+SELECT * 
+	FROM tanulók
+2c
+SELECT Nev
+	FROM tanulók
+    WHERE Osztaly = '11C';
+2d
+SELECT Nev, Osztaly
+	FROM tanulók
+    WHERE Kor = 16;
+
+2e
