@@ -1,0 +1,7 @@
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\bin\Debug\valtozokgyak.exe.config
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\bin\Debug\valtozokgyak.exe
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\bin\Debug\valtozokgyak.pdb
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\obj\Debug\valtozokgyak.csproj.AssemblyReference.cache
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\obj\Debug\valtozokgyak.csproj.CoreCompileInputs.cache
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\obj\Debug\valtozokgyak.exe
+Z:\Programozas_C\Valtozok\valtozokgyak\valtozokgyak\obj\Debug\valtozokgyak.pdb
