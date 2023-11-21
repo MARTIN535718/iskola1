@@ -1,0 +1,23 @@
+#fo_box {
+    margin: auto;
+    
+}
+
+.hirek_box {
+    
+    background-color: yellow;
+    width: ;
+}
+
+.hir {
+    background-color: rgb(66, 66, 66);
+    width: 20%;
+    padding: 10px;
+    margin: 20px;
+    float: right;
+}
+
+.hirek_kep {
+    width: 200px;
+    padding: 20px;
+}
