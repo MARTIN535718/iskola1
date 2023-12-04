@@ -1,0 +1,53 @@
+
+1.Feladat
+
+CREATE DATABASE autokereskedes_km
+	DEFAULT CHARACTER SET utf8
+    DEFAULT COLLATE utf8_hungarian_ci;
+
+
+
+
+
+
+CREATE TABLE Autó
+(
+    Id INT NOT NULL PRIMARY KEY,
+    Rendszám CHAR(7) NOT NULL,
+    Típus VARCHAR(15),
+    Szín VARCHAR(6),
+    GyártásiÉv INT,
+    Érték INT
+);
+
+
+CREATE TABLE tulajdonos
+(
+    TulajId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    AutoAzon INT,
+    Név VARCHAR(30),
+    Született DATE,
+    Neme CHAR(1),
+    ElsoTulaj BOOLEAN,
+    Város VARCHAR(15)
+);
+
+DESCRIBE autó;
+DESCRIBE tulajdonos;
+
+
+
+
+3.feladat
+
+
+a)
+SELECT Rendszám, GyártásiÉv
+	FROM autó
+    WHERE típus = 'skoda';
+
+b)
+
+SELECT rendszám, név
+	FROM autó, tulajdonos;
+    
