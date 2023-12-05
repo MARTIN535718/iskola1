@@ -1,0 +1,7 @@
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\obj\Debug\Elagazasok_HF.csproj.AssemblyReference.cache
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\obj\Debug\Elagazasok_HF.csproj.CoreCompileInputs.cache
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\bin\Debug\Elagazasok_HF.exe.config
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\bin\Debug\Elagazasok_HF.exe
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\bin\Debug\Elagazasok_HF.pdb
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\obj\Debug\Elagazasok_HF.exe
+E:\CSharp\Elagazasok_HF\Elagazasok_HF\obj\Debug\Elagazasok_HF.pdb
