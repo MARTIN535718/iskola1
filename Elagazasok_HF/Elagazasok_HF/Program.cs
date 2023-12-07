@@ -10,7 +10,7 @@ namespace Elagazasok_HF
     {
         static void Main(string[] args)
         {
-            /*
+            
             feladat1();
 
             feladat2();
@@ -25,7 +25,7 @@ namespace Elagazasok_HF
 
             feladat7();
 
-            feladat8();*/
+            feladat8();
 
             feladat9();
 
@@ -43,12 +43,137 @@ namespace Elagazasok_HF
 
             feladat16();
 
+            feladat18();
+
+            feladat19();
+
+            feladat20();
+
+            feladat21();
+
             Console.ReadKey();
+        }
+
+        private static void feladat21()
+        {
+            Console.WriteLine("21.Feladat");
+
+            int szam;
+            Console.Write("Írj be egy számot: ");
+            szam = Convert.ToInt32(Console.ReadLine());
+
+            double osszeg = szam % 3;
+
+            if (osszeg == 0)
+            {
+                Console.WriteLine("Nincs maradék");
+            }
+
+            else
+            {
+                Console.WriteLine("Maradék: {0}", osszeg);
+            }
+        }
+
+        private static void feladat20()
+        {
+            Console.WriteLine("20.Feladat");
+
+            int jegy;
+            Console.WriteLine("Írj be egy jegyet: ");
+            jegy = Convert.ToInt32(Console.ReadLine());
+
+            if (jegy == 1)
+            {
+                Console.WriteLine("Sajnos a tanuló megbukott");
+            }
+
+            else if (jegy >= 2) { Console.WriteLine("A tanuló átment"); }
+
+        }
+
+        private static void feladat19()
+        {
+            Console.WriteLine("19.feladat");
+
+            Console.WriteLine("Celsius <--> Kelvin átváltó program");
+
+            int homerseklet;
+            Console.Write("Adj meg egy hőmérséklet értéket: ");
+            homerseklet = Convert.ToInt32(Console.ReadLine());
+
+            int opcio;
+            Console.Write("Válassz opciót: (1) C˙ --> K˙\n                (2) K˙ --> C˙ : ");
+            opcio = Convert.ToInt32(Console.ReadLine());
+
+            if (opcio == 1)
+            {
+                double osszeg = 273.15 + homerseklet;
+                Console.WriteLine("{0} C˙ = {1} K˙", homerseklet, osszeg);
+            }
+
+            else if (opcio == 2)
+            {
+                double osszeg = -273.15 + homerseklet;
+                Console.WriteLine("{0} K˙ = {1} C˙", homerseklet, osszeg);
+            }
+
+            else { Console.WriteLine("Ilyen opció nincs"); }
+           
+        }
+
+        private static void feladat18()
+        {
+            Console.WriteLine("18.feladat");
+
+            Console.Write("Írj be egy hónapnak a aszámát: ");
+
+            int honap;
+            honap = Convert.ToInt32(Console.ReadLine());
+
+            if (honap >= 3 && honap <= 5)
+            {
+                Console.WriteLine("Évszak: Tavasz");
+            }
+            else if (honap >= 6 && honap <= 8)
+            {
+                Console.WriteLine("Évszak: Nyár");
+            }
+            else if (honap >= 9 && honap <= 11)
+            {
+                Console.WriteLine("Évszak: Ősz");
+            }
+            else if (honap == 12 || honap <= 3)
+            {
+                Console.WriteLine("Évszak: Tél");
+            }
+            else
+            {
+                Console.WriteLine("A szám érvénytelen");
+            }
+
         }
 
         private static void feladat16()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("16.Feladat");
+            Console.Write("Írj be egy 2 milliárd alatti számot: ");
+            
+            string adat = Console.ReadLine();
+
+            int ossz_jegy = adat.Length;
+            
+            
+            if (ossz_jegy < 8)
+            {
+                Console.WriteLine("A szám {0} jegyű", ossz_jegy);
+            }
+
+            else
+            {
+                Console.WriteLine("A szám 8, vagy annál többjegyű!");
+            }
+
         }
 
         private static void feladat15()
