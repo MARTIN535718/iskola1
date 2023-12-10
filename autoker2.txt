@@ -1,0 +1,84 @@
+1.Feladat
+
+CREATE DATABASE autokereskedes_km
+	DEFAULT CHARACTER SET utf8
+    DEFAULT COLLATE utf8_hungarian_ci;
+
+
+
+
+
+
+CREATE TABLE Autó
+(
+    Id INT NOT NULL PRIMARY KEY,
+    Rendszám CHAR(7) NOT NULL,
+    Típus VARCHAR(15),
+    Szín VARCHAR(6),
+    GyártásiÉv INT,
+    Érték INT
+);
+
+
+CREATE TABLE tulajdonos
+(
+    TulajId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    AutoAzon INT,
+    Név VARCHAR(30),
+    Született DATE,
+    Neme CHAR(1),
+    ElsoTulaj BOOLEAN,
+    Város VARCHAR(15)
+);
+
+DESCRIBE autó;
+DESCRIBE tulajdonos;
+
+
+
+
+3.feladat
+
+
+a)
+SELECT Rendszám, GyártásiÉv
+	FROM autó
+    WHERE típus = 'skoda';
+
+b)
+
+SELECT rendszám, név
+	FROM autó, tulajdonos;
+
+c)
+SELECT DISTINCT típus
+	FROM autó;
+
+d) 
+SELECT COUNT(*) AS "Piros opelek száma"
+	FROM autó
+    WHERE szín = "piros" and típus = "opel"
+    GROUP BY típus;
+
+e)
+SELECT AVG(érték) AS "Piros opelek átlagértéke"
+	FROM autó
+    WHERE szín = "piros" and típus = "opel";
+
+f)
+SELECT DISTINCT város, COUNT(TulajId) AS "Tulajdonosok száma"
+	FROM tulajdonos
+    	GROUP BY város  
+	ORDER BY `Tulajdonosok száma` DESC;
+
+g)
+SELECT rendszám, típus, név
+	FROM autó, tulajdonos
+    WHERE város = 'Budapest'
+    GROUP BY rendszám;
+
+h)
+SELECT rendszám, típus, név, érték
+	FROM autó, tulajdonos
+    ORDER BY érték DESC, gyártásiév DESC
+    LIMIT 1;
