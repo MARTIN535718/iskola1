@@ -1,0 +1,110 @@
+
+1.Feladat
+
+CREATE DATABASE autokereskedes_km
+	DEFAULT CHARACTER SET utf8
+    DEFAULT COLLATE utf8_hungarian_ci;
+
+
+
+
+
+
+CREATE TABLE Autó
+(
+    Id INT NOT NULL PRIMARY KEY,
+    Rendszám CHAR(7) NOT NULL,
+    Típus VARCHAR(15),
+    Szín VARCHAR(6),
+    GyártásiÉv INT,
+    Érték INT
+);
+
+
+CREATE TABLE tulajdonos
+(
+    TulajId INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    AutoAzon INT,
+    Név VARCHAR(30),
+    Született DATE,
+    Neme CHAR(1),
+    ElsoTulaj BOOLEAN,
+    Város VARCHAR(15)
+);
+
+DESCRIBE autó;
+DESCRIBE tulajdonos;
+
+
+
+
+3.feladat
+
+
+a)
+SELECT Rendszám, GyártásiÉv
+	FROM autó
+    WHERE típus = 'skoda';
+
+b)
+
+SELECT rendszám, név
+	FROM autó, tulajdonos;
+
+c)
+
+SELECT DISTINCT típus
+	FROM autó;
+    
+d)
+
+SELECT COUNT(Érték) AS 'Piros Opelek SZÁMA'
+	FROM autó
+    WHERE típus = 'opel' AND szín = 'piros';
+
+e)
+
+SELECT AVG(Érték) AS 'Piros Opelek átlagértéke'
+	FROM autó
+    WHERE típus = 'opel' AND szín = 'piros';
+
+f) 
+
+SELECT város, COUNT(*) AS 'Tulajdonosok Száma' 
+	FROM tulajdonos
+    GROUP BY város
+    ORDER BY 'Tulajdonosok Száma' DESC;
+
+g)
+SELECT Rendszám, Típus, Név
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    WHERE város = "Budapest";
+
+h)
+SELECT Rendszám, Típus, Név, Érték
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    ORDER BY Érték DESC
+    LIMIT 1;
+
+i) 
+
+SELECT Rendszám, Név
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    WHERE Rendszám LIKE '%A%';
+
+j)
+
+SELECT Rendszám, Név
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    WHERE Rendszám LIKE '_A%';
+
+K)
+SELECT Rendszám, Név
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    WHERE Rendszám NOT LIKE '%A%';
+
+l)
+SELECT *
+	FROM autó INNER JOIN tulajdonos ON Id = AutoAzon
+    WHERE Rendszám = 'LOL-003';
+
